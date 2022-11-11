@@ -10,8 +10,10 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Example {
-  id        String   @id @default(cuid())
+model QrCodes {
+  id        String   @id @unique @default(cuid())
   createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+
+  slug String @unique
+  hits BigInt @default(0)
 }

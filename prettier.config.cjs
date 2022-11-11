@@ -1,4 +1,9 @@
 /** @type {import("prettier").Config} */
 module.exports = {
-  plugins: [require.resolve("prettier-plugin-tailwindcss")],
+  plugins: [require("./plugins/prettier-tailwind-sort-fix/index.cjs")],
+  bracketSameLine: true,
+  quoteProps: "consistent",
+  importOrder: ["^@/(.*)$", "^[./]"],
+  importOrderSeparation: true,
+  importOrderSortSpecifiers: true,
 };
