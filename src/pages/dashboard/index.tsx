@@ -36,7 +36,11 @@ const Dashboard: NextPage = () => {
     refetchIntervalInBackground: true,
   });
 
-  useEffect(() => console.log(hello), [hello]);
+  const [qr, setQr] = useState("");
+
+  useEffect(() => {
+    setQr(location.origin + "/api/track/qr");
+  }, []);
 
   return (
     <>
@@ -62,6 +66,7 @@ const Dashboard: NextPage = () => {
             </p>
           </div>
         </div>
+        {qr && <QrCode input={qr} />}
       </div>
     </>
   );
