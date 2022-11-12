@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@prisma/client": "^4.5.0",
+    "@react-three/fiber": "^8.9.1",
     "@tanstack/react-query": "^4.10.0",
     "@trpc/client": "10.0.0-rc.4",
     "@trpc/next": "10.0.0-rc.4",
@@ -24,6 +25,7 @@
     "react-dom": "18.2.0",
     "react-webcam": "^7.0.1",
     "superjson": "1.9.1",
+    "three": "^0.146.0",
     "zod": "^3.18.0"
   },
   "devDependencies": {

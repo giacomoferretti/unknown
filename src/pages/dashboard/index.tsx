@@ -1,9 +1,18 @@
 import { type NextPage } from "next";
 import Head from "next/head";
+import { useEffect } from "react";
 
 import { env } from "@/env/client.mjs";
+import { trpc } from "@/utils/trpc";
 
 const Dashboard: NextPage = () => {
+  const hello = trpc.analytics.getBySlug.useQuery("qr", {
+    refetchInterval: 1000,
+    refetchIntervalInBackground: true,
+  });
+
+  useEffect(() => console.log(hello), [hello]);
+
   return (
     <>
       <Head>
@@ -16,7 +25,10 @@ const Dashboard: NextPage = () => {
         </h1>
         <div className="mt-4 rounded-lg border border-neutral-500 p-4">
           <h2 className="text-neutral-600">QR Code visits</h2>
-          <p className="text-2xl font-bold">0</p>
+          <p className="text-2xl font-bold">
+            {hello.isLoading && <>Loading...</>}
+            {hello.data && <>{hello.data.hits.toString()}</>}
+          </p>
         </div>
       </div>
     </>

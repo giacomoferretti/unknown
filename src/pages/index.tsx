@@ -1,14 +1,11 @@
 import { type NextPage } from "next";
 import Head from "next/head";
-import Link from "next/link";
-import Webcam from "react-webcam";
 
+import Webcam from "@/components/Webcam";
 import { env } from "@/env/client.mjs";
 
-import { trpc } from "../utils/trpc";
-
 const Home: NextPage = () => {
-  const hello = trpc.example.hello.useQuery({ text: "from tRPC" });
+  // const hello = trpc.example.hello.useQuery({ text: "from tRPC" });
 
   return (
     <>
@@ -17,7 +14,9 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <Webcam mirrored />
+        {/* <Webcam mirrored /> */}
+
+        <Webcam.Debug />
       </main>
     </>
   );
