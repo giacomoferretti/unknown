@@ -1,9 +1,34 @@
 import { type NextPage } from "next";
 import Head from "next/head";
-import { useEffect } from "react";
+import Image from "next/image";
+import QRCode from "qrcode";
+import { useEffect, useState } from "react";
 
 import { env } from "@/env/client.mjs";
 import { trpc } from "@/utils/trpc";
+
+// TODO: Optimize component
+const QrCode = ({ input }: { input: string }) => {
+  const [data, setData] = useState("");
+
+  useEffect(() => {
+    QRCode.toDataURL(input, { scale: 8 }).then((data) => setData(data));
+  }, [input]);
+
+  return (
+    <>
+      {data.length !== 0 && (
+        <Image
+          className="rounded-md border shadow-md"
+          alt=""
+          src={data}
+          width={200}
+          height={200}
+        />
+      )}
+    </>
+  );
+};
 
 const Dashboard: NextPage = () => {
   const hello = trpc.analytics.getBySlug.useQuery("qr", {

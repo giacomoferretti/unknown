@@ -21,6 +21,7 @@
     "@trpc/react-query": "10.0.0-rc.4",
     "@trpc/server": "10.0.0-rc.4",
     "next": "13.0.2",
+    "qrcode": "^1.5.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-webcam": "^7.0.1",
@@ -31,6 +32,7 @@
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^3.4.0",
     "@types/node": "^18.0.0",
+    "@types/qrcode": "^1.5.0",
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
     "@typescript-eslint/eslint-plugin": "^5.33.0",
