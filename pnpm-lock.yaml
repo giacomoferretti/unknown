@@ -1,6 +1,8 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@heroicons/react': ^2.0.13
+  '@next/font': ^13.0.3
   '@prisma/client': ^4.5.0
   '@react-three/fiber': ^8.9.1
   '@tanstack/react-query': ^4.10.0
@@ -16,8 +18,10 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ^5.33.0
   '@typescript-eslint/parser': ^5.33.0
   autoprefixer: ^10.4.7
+  classnames: ^2.3.2
   eslint: ^8.26.0
   eslint-config-next: 13.0.2
+  gsap: ^3.11.3
   next: 13.0.2
   postcss: ^8.4.14
   postcss-color-rgb-tailwind: github:giacomoferretti/postcss-color-rgb-tailwind
@@ -36,6 +40,8 @@ specifiers:
   zod: ^3.18.0
 
 dependencies:
+  '@heroicons/react': 2.0.13_react@18.2.0
+  '@next/font': 13.0.3
   '@prisma/client': 4.6.1_prisma@4.6.1
   '@react-three/fiber': 8.9.1_mjlgqb43i6mvslmnwgzrdumoh4
   '@tanstack/react-query': 4.14.6_biqbaboplfbrettd7655fr4n2y
@@ -43,6 +49,8 @@ dependencies:
   '@trpc/next': 10.0.0-rc.4_7svaujn233hnsxbytvvkma6szu
   '@trpc/react-query': 10.0.0-rc.4_5wlovuqpmemljzmj4ocy4sh6fm
   '@trpc/server': 10.0.0-rc.4
+  classnames: 2.3.2
+  gsap: 3.11.3
   next: 13.0.2_biqbaboplfbrettd7655fr4n2y
   qrcode: 1.5.1
   react: 18.2.0
@@ -356,6 +364,14 @@ packages:
       - supports-color
     dev: true
 
+  /@heroicons/react/2.0.13_react@18.2.0:
+    resolution: {integrity: sha512-iSN5XwmagrnirWlYEWNPdCDj9aRYVD/lnK3JlsC9/+fqGF80k8C7rl+1HCvBX0dBoagKqOFBs6fMhJJ1hOg1EQ==}
+    peerDependencies:
+      react: '>= 16'
+    dependencies:
+      react: 18.2.0
+    dev: false
+
   /@humanwhocodes/config-array/0.11.7:
     resolution: {integrity: sha512-kBbPWzN8oVMLb0hOUYXhmxggL/1cJE6ydvjDIGi9EnAGUyA7cLVKQg+d/Dsm+KZwx2czGHrCmMVLiyg8s5JPKw==}
     engines: {node: '>=10.10.0'}
@@ -430,6 +446,10 @@ packages:
     dependencies:
       glob: 7.1.7
     dev: true
+
+  /@next/font/13.0.3:
+    resolution: {integrity: sha512-J3bZooNyhzhRshEJZlc4Kagfx6f8LQkPdCsP0nZm63dAUaoeMaQRidFFhbL68WZ3S5XleVfpGYypZuBSyJqYtw==}
+    dev: false
 
   /@next/swc-android-arm-eabi/13.0.2:
     resolution: {integrity: sha512-X54UQCTFyOGnJP//Z71dPPlp4BCYcQL2ncikKXQcPzVpqPs4C3m+tKC8ivBNH6edAXkppwsLRz1/yQwgSZ9Swg==}
@@ -1223,6 +1243,10 @@ packages:
       fsevents: 2.3.2
     dev: true
 
+  /classnames/2.3.2:
+    resolution: {integrity: sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==}
+    dev: false
+
   /client-only/0.0.1:
     resolution: {integrity: sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==}
     dev: false
@@ -1970,6 +1994,10 @@ packages:
   /grapheme-splitter/1.0.4:
     resolution: {integrity: sha512-bzh50DW9kTPM00T8y4o8vQg89Di9oLJVLW/KaOGIXJWP/iqCN6WKYkbNOF04vFLJhwcpYUh9ydh/+5vpOqV4YQ==}
     dev: true
+
+  /gsap/3.11.3:
+    resolution: {integrity: sha512-xc/iIJy+LWiMbRa4IdMtdnnKa/7PXEK6NNzV71gdOYUVeTZN7UWnLU0fB7Hi1iwiz4ZZoYkBZPPYGg+2+zzFHA==}
+    dev: false
 
   /has-bigints/1.0.2:
     resolution: {integrity: sha512-tSvCKtBr9lkF0Ex0aQiP9N+OpV4zi2r/Nee5VkRDbaqv35RLYMzbwQfFSZZH0kR+Rd6302UJZ2p/bJCEoR3VoQ==}
